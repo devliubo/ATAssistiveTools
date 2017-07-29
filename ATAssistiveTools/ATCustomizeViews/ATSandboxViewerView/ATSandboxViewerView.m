@@ -36,6 +36,7 @@ typedef NS_ENUM(NSUInteger, ATFileItemType) {
 @interface ATSandboxViewerView ()<UITableViewDelegate, UITableViewDataSource, GCDWebUploaderDelegate>
 
 @property (nonatomic, strong) UIButton *webServerButton;
+@property (nonatomic, strong) UILabel *webServerLabel;
 @property (nonatomic, strong) UITableView *mainTableView;
 
 @property (nonatomic, strong) NSString *currentPath;
@@ -96,6 +97,15 @@ typedef NS_ENUM(NSUInteger, ATFileItemType) {
     
     [self addSubview:self.webServerButton];
     
+    self.webServerLabel = [[UILabel alloc] init];
+    self.webServerLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    self.webServerLabel.font = [UIFont systemFontOfSize:14];
+    self.webServerLabel.textAlignment = NSTextAlignmentLeft;
+    self.webServerLabel.adjustsFontSizeToFitWidth = YES;
+    self.webServerLabel.text = @"Web Server Stoped";
+    
+    [self addSubview:self.webServerLabel];
+    
     self.mainTableView = [[UITableView alloc] init];
     self.mainTableView.translatesAutoresizingMaskIntoConstraints = NO;
     self.mainTableView.delegate = self;
@@ -105,10 +115,11 @@ typedef NS_ENUM(NSUInteger, ATFileItemType) {
     
     [self addSubview:self.mainTableView];
     
-    NSDictionary *views = NSDictionaryOfVariableBindings(_webServerButton, _mainTableView);
+    NSDictionary *views = NSDictionaryOfVariableBindings(_webServerButton, _webServerLabel, _mainTableView);
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[_webServerButton(==width)]" options:0 metrics:@{@"width":@(80)} views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[_webServerButton(==width)]-10-[_webServerLabel]-10-|" options:0 metrics:@{@"width":@(80)} views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[_webServerButton(==height)]" options:0 metrics:@{@"height":@(20)} views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[_webServerLabel(==height)]" options:0 metrics:@{@"height":@(20)} views:views]];
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-5-[_mainTableView]-5-|" options:0 metrics:nil views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_webServerButton]-10-[_mainTableView]-10-|" options:0 metrics:nil views:views]];
@@ -201,6 +212,7 @@ typedef NS_ENUM(NSUInteger, ATFileItemType) {
         NSLog(@"Visit %@ in your web browser", self.webUploader.serverURL);
         
         [self.webServerButton setTitle:@"Stop" forState:UIControlStateNormal];
+        self.webServerLabel.text = self.webUploader.serverURL.absoluteString;
     }
     else
     {
@@ -209,30 +221,41 @@ typedef NS_ENUM(NSUInteger, ATFileItemType) {
         self.webUploader = nil;
         
         [self.webServerButton setTitle:@"Start" forState:UIControlStateNormal];
+        self.webServerLabel.text = @"Web Server Stoped";
     }
 }
 
 - (void)refreshItemsIfNeedForPath:(NSString *)path
 {
-    
+    if ([path isEqualToString:self.currentPath])
+    {
+        [self loadAllItemInPath:self.currentPath];
+    }
 }
 
 #pragma mark - GCDWebUploaderDelegate
 
 - (void)webUploader:(GCDWebUploader*)uploader didUploadFileAtPath:(NSString*)path
 {
-    [self refreshItemsIfNeedForPath:path];
+    [self refreshItemsIfNeedForPath:[path stringByDeletingLastPathComponent]];
 }
 
 - (void)webUploader:(GCDWebUploader*)uploader didMoveItemFromPath:(NSString*)fromPath toPath:(NSString*)toPath
 {
-    [self refreshItemsIfNeedForPath:fromPath];
-    [self refreshItemsIfNeedForPath:toPath];
+    [self refreshItemsIfNeedForPath:[fromPath stringByDeletingLastPathComponent]];
+    [self refreshItemsIfNeedForPath:[toPath stringByDeletingLastPathComponent]];
 }
 
 - (void)webUploader:(GCDWebUploader*)uploader didDeleteItemAtPath:(NSString*)path
 {
-    [self refreshItemsIfNeedForPath:path];
+    if ([self.currentPath containsString:path])
+    {
+        [self loadAllItemInPath:[path stringByDeletingLastPathComponent]];
+    }
+    else
+    {
+        [self refreshItemsIfNeedForPath:[path stringByDeletingLastPathComponent]];
+    }
 }
 
 - (void)webUploader:(GCDWebUploader*)uploader didCreateDirectoryAtPath:(NSString*)path
