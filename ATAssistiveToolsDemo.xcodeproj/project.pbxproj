@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3A63D7311F2ABD5100670E2D /* ATAssistiveTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D7101F2ABD5100670E2D /* ATAssistiveTools.m */; };
-		3A63D7321F2ABD5100670E2D /* ATContainerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D7121F2ABD5100670E2D /* ATContainerWindow.m */; };
 		3A63D7331F2ABD5100670E2D /* ATDeviceLogsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D7161F2ABD5100670E2D /* ATDeviceLogsView.m */; };
 		3A63D7341F2ABD5100670E2D /* ATFakeLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D7191F2ABD5100670E2D /* ATFakeLocationView.m */; };
 		3A63D73A1F2ABD5100670E2D /* ATSandboxViewerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D7271F2ABD5100670E2D /* ATSandboxViewerView.m */; };
@@ -16,6 +15,7 @@
 		3A63D73C1F2ABD5100670E2D /* ATExpandInfoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D72C1F2ABD5100670E2D /* ATExpandInfoViewCell.m */; };
 		3A63D73D1F2ABD5100670E2D /* ATRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D72E1F2ABD5100670E2D /* ATRootViewController.m */; };
 		3A63D73E1F2ABD5100670E2D /* ATShrinkInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D7301F2ABD5100670E2D /* ATShrinkInfoView.m */; };
+		3A63D7501F2C338900670E2D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D74F1F2C338900670E2D /* README.md */; };
 		3AAB7E2D1F2A25D600F48E86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAB7E2C1F2A25D600F48E86 /* main.m */; };
 		3AAB7E301F2A25D600F48E86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAB7E2F1F2A25D600F48E86 /* AppDelegate.m */; };
 		3AAB7E331F2A25D600F48E86 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAB7E321F2A25D600F48E86 /* ViewController.m */; };
@@ -29,8 +29,6 @@
 		17C13EC1CFD9AE68E252E648 /* Pods-ATAssistiveToolsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATAssistiveToolsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ATAssistiveToolsDemo/Pods-ATAssistiveToolsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		3A63D70F1F2ABD5100670E2D /* ATAssistiveTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATAssistiveTools.h; sourceTree = "<group>"; };
 		3A63D7101F2ABD5100670E2D /* ATAssistiveTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATAssistiveTools.m; sourceTree = "<group>"; };
-		3A63D7111F2ABD5100670E2D /* ATContainerWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATContainerWindow.h; sourceTree = "<group>"; };
-		3A63D7121F2ABD5100670E2D /* ATContainerWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATContainerWindow.m; sourceTree = "<group>"; };
 		3A63D7151F2ABD5100670E2D /* ATDeviceLogsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATDeviceLogsView.h; sourceTree = "<group>"; };
 		3A63D7161F2ABD5100670E2D /* ATDeviceLogsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATDeviceLogsView.m; sourceTree = "<group>"; };
 		3A63D7181F2ABD5100670E2D /* ATFakeLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATFakeLocationView.h; sourceTree = "<group>"; };
@@ -46,6 +44,7 @@
 		3A63D72E1F2ABD5100670E2D /* ATRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATRootViewController.m; sourceTree = "<group>"; };
 		3A63D72F1F2ABD5100670E2D /* ATShrinkInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATShrinkInfoView.h; sourceTree = "<group>"; };
 		3A63D7301F2ABD5100670E2D /* ATShrinkInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATShrinkInfoView.m; sourceTree = "<group>"; };
+		3A63D74F1F2C338900670E2D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3AAB7E281F2A25D600F48E86 /* ATAssistiveToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATAssistiveToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AAB7E2C1F2A25D600F48E86 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3AAB7E2E1F2A25D600F48E86 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -79,8 +78,6 @@
 				3A63D70F1F2ABD5100670E2D /* ATAssistiveTools.h */,
 				3A63D7101F2ABD5100670E2D /* ATAssistiveTools.m */,
 				3A63D7281F2ABD5100670E2D /* ATCustomViewProtocol.h */,
-				3A63D7111F2ABD5100670E2D /* ATContainerWindow.h */,
-				3A63D7121F2ABD5100670E2D /* ATContainerWindow.m */,
 				3A63D72D1F2ABD5100670E2D /* ATRootViewController.h */,
 				3A63D72E1F2ABD5100670E2D /* ATRootViewController.m */,
 				3A63D72F1F2ABD5100670E2D /* ATShrinkInfoView.h */,
@@ -133,6 +130,7 @@
 		3AAB7E1F1F2A25D600F48E86 = {
 			isa = PBXGroup;
 			children = (
+				3A63D74F1F2C338900670E2D /* README.md */,
 				3A63D70E1F2ABD5100670E2D /* ATAssistiveTools */,
 				3AAB7E2A1F2A25D600F48E86 /* ATAssistiveToolsDemo */,
 				3AAB7E291F2A25D600F48E86 /* Products */,
@@ -317,7 +315,7 @@
 				3AAB7E331F2A25D600F48E86 /* ViewController.m in Sources */,
 				3AAB7E301F2A25D600F48E86 /* AppDelegate.m in Sources */,
 				3A63D7331F2ABD5100670E2D /* ATDeviceLogsView.m in Sources */,
-				3A63D7321F2ABD5100670E2D /* ATContainerWindow.m in Sources */,
+				3A63D7501F2C338900670E2D /* README.md in Sources */,
 				3A63D73D1F2ABD5100670E2D /* ATRootViewController.m in Sources */,
 				3A63D73C1F2ABD5100670E2D /* ATExpandInfoViewCell.m in Sources */,
 				3A63D7341F2ABD5100670E2D /* ATFakeLocationView.m in Sources */,

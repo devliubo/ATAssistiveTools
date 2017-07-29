@@ -7,7 +7,14 @@
 //
 
 #import "AppDelegate.h"
+
+// Assistive Tool
 #import "ATAssistiveTools.h"
+
+// Custom Views
+#import "ATDeviceLogsView.h"
+#import "ATFakeLocationView.h"
+#import "ATSandboxViewerView.h"
 
 @interface AppDelegate ()
 
@@ -17,9 +24,23 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     
+    // Show the Assistive Tool
     [[ATAssistiveTools sharedInstance] show];
+    
+    // Add custom views to assistive tool
+    
+    // add fake location view
+    ATFakeLocationView *simLocView = [[ATFakeLocationView alloc] init];
+    [[ATAssistiveTools sharedInstance] addCustomView:simLocView forTitle:@"FakeLocation"];
+    
+    // add sandbox viewer view
+    ATSandboxViewerView *sandboxView = [[ATSandboxViewerView alloc] init];
+    [[ATAssistiveTools sharedInstance] addCustomView:sandboxView forTitle:@"SandboxViewer"];
+    
+    // add device log view
+    ATDeviceLogsView *logsView = [[ATDeviceLogsView alloc] init];
+    [[ATAssistiveTools sharedInstance] addCustomView:logsView forTitle:@"DeviceLog"];
     
     return YES;
 }

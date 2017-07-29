@@ -7,17 +7,11 @@
 //
 
 #import "ATAssistiveTools.h"
-#import "ATContainerWindow.h"
 #import "ATRootViewController.h"
 
-// Custom Views
-#import "ATDeviceLogsView.h"
-#import "ATFakeLocationView.h"
-#import "ATSandboxViewerView.h"
+@interface ATAssistiveTools ()<ATRootViewControllerDelegate>
 
-@interface ATAssistiveTools ()<ATContainerWindowDelegate,ATRootViewControllerDelegate>
-
-@property (nonatomic, strong) ATContainerWindow *assistiveWindow;
+@property (nonatomic, strong) UIWindow *assistiveWindow;
 @property (nonatomic, strong) ATRootViewController *rootViewController;
 
 @end
@@ -67,8 +61,7 @@
     _rootViewController.autorotateEnabled = YES;
     
     // ATContainerWindow
-    _assistiveWindow = [[ATContainerWindow alloc] initWithFrame:_rootViewController.shrinkedWindowFrame];
-    _assistiveWindow.containerDelegate = self;
+    _assistiveWindow = [[UIWindow alloc] initWithFrame:_rootViewController.shrinkedWindowFrame];
     _assistiveWindow.windowLevel = CGFLOAT_MAX;
     _assistiveWindow.layer.masksToBounds = YES;
     _assistiveWindow.backgroundColor = [UIColor clearColor];
@@ -77,27 +70,11 @@
     self.assistiveWindow.rootViewController = self.rootViewController;
 }
 
-#pragma mark - Private: Load Custom View
-
-- (void)loadCustomViews
-{
-    ATFakeLocationView *simLocView = [[ATFakeLocationView alloc] init];
-    [self addCustomView:simLocView forTitle:@"FakeLocation"];
-    
-    ATSandboxViewerView *sandboxView = [[ATSandboxViewerView alloc] init];
-    [self addCustomView:sandboxView forTitle:@"SandboxViewer"];
-    
-    ATDeviceLogsView *logsView = [[ATDeviceLogsView alloc] init];
-    [self addCustomView:logsView forTitle:@"DeviceLog"];
-}
-
 #pragma mark - Public: Interface
 
 - (void)show
 {
     [self makeWindowVisible:self.assistiveWindow];
-    
-    [self loadCustomViews];
 }
 
 - (void)makeWindowVisible:(UIWindow *)window
@@ -139,8 +116,8 @@
     [self.rootViewController removeAllCustomViews];
 }
 
-#pragma mark - Private: ATContainerWindowDelegate
-
+//#pragma mark - Private: ATContainerWindowDelegate
+//
 //- (BOOL)customPointInside:(CGPoint)point withEvent:(UIEvent *)event
 //{
 //    BOOL inShrink = [self.shrinkInfoView pointInside:[self.assistiveWindow convertPoint:point toView:self.shrinkInfoView] withEvent:event];

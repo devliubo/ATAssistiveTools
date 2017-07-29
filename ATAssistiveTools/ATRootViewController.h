@@ -6,7 +6,7 @@
 //  Copyright © 2017年 devliubo. All rights reserved.
 //
 
-#import "ATContainerWindow.h"
+#import <UIKit/UIKit.h>
 #import "ATCustomViewProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)removeAllCustomViews;
 
 // used for ATAssistiveTools
-@property (nonatomic, weak) ATContainerWindow *assistiveWindow;
+@property (nonatomic, weak) UIWindow *assistiveWindow;
 @property (nonatomic, readonly) CGRect shrinkedWindowFrame;
 
 @end
