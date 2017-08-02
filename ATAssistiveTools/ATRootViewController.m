@@ -66,8 +66,6 @@ typedef NS_ENUM(NSUInteger, ATRootViewControllerStatus) {
 
 - (void)dealloc
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    
     self.shrinkInfoView.status = ATShrinkInfoViewStatusNone;
 }
 
@@ -112,7 +110,6 @@ typedef NS_ENUM(NSUInteger, ATRootViewControllerStatus) {
     _panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGestureRecognizerAction:)];
     
     _autorotateEnabled = YES;
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationDidChangeAction:) name:UIDeviceOrientationDidChangeNotification object:nil];
 }
 
 - (void)initShrinkInfoView
@@ -151,47 +148,60 @@ typedef NS_ENUM(NSUInteger, ATRootViewControllerStatus) {
     return self.autorotateEnabled;
 }
 
-- (void)orientationDidChangeAction:(NSNotification *)notification
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator>)coordinator
 {
-    if (!self.autorotateEnabled)
-    {
-        return;
-    }
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
     
-    CGRect preScreenBounds = self.curScreenBounds;
-    CGRect curScreenBounds = [[UIScreen mainScreen] bounds];
-    
-    double xRate = curScreenBounds.size.width / preScreenBounds.size.width;
-    double yRate = curScreenBounds.size.height / preScreenBounds.size.height;
-    self.curScreenBounds = curScreenBounds;
-    
-    // calculate shrinked window frame
-    CGRect extendFrame = CGRectInset(self.shrinkedWindowFrame, -kATShrinkViewMargin, -kATShrinkViewMargin);
-    
-    CGPoint resOrigin = CGPointMake(extendFrame.origin.x * xRate, extendFrame.origin.y * yRate);
-    extendFrame.origin.x = resOrigin.x;
-    extendFrame.origin.y = resOrigin.y;
-    
-    CGRect resFrame = CGRectInset(extendFrame, kATShrinkViewMargin, kATShrinkViewMargin);
-    self.shrinkedWindowFrame = [self normalizdFrameToScreenSide:resFrame];
-    
-    // calculate expended window frame
-    CGPoint newExpandOrigin = CGPointMake(self.expandedWindowFrame.origin.x * xRate, self.expandedWindowFrame.origin.y * yRate);
-    CGRect newExpandFrame = CGRectMake(newExpandOrigin.x, newExpandOrigin.y, self.expandedWindowFrame.size.width, self.expandedWindowFrame.size.height);
-    self.expandedWindowFrame = newExpandFrame;
-    
-    if (self.status == ATRootViewControllerStatusShrink)
-    {
-        self.assistiveWindow.frame = self.shrinkedWindowFrame;
-    }
-    else if (self.status == ATRootViewControllerStatusExpand)
-    {
-        self.assistiveWindow.frame = self.expandedWindowFrame;
-    }
-    else
-    {
-        NSLog(@"ATRootViewControllerStatusShrink Error");
-    }
+    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+        
+        if (!self.autorotateEnabled)
+        {
+            return;
+        }
+        
+        CGRect preScreenBounds = self.curScreenBounds;
+        CGRect curScreenBounds = [[UIScreen mainScreen] bounds];
+        
+        if (CGRectEqualToRect(preScreenBounds, curScreenBounds))
+        {
+            return;
+        }
+        
+        double xRate = curScreenBounds.size.width / preScreenBounds.size.width;
+        double yRate = curScreenBounds.size.height / preScreenBounds.size.height;
+        self.curScreenBounds = curScreenBounds;
+        
+        // calculate shrinked window frame
+        CGRect extendFrame = CGRectInset(self.shrinkedWindowFrame, -kATShrinkViewMargin, -kATShrinkViewMargin);
+        
+        CGPoint resOrigin = CGPointMake(extendFrame.origin.x * xRate, extendFrame.origin.y * yRate);
+        extendFrame.origin.x = resOrigin.x;
+        extendFrame.origin.y = resOrigin.y;
+        
+        CGRect resFrame = CGRectInset(extendFrame, kATShrinkViewMargin, kATShrinkViewMargin);
+        self.shrinkedWindowFrame = [self normalizdFrameToScreenSide:resFrame];
+        
+        // calculate expended window frame
+        CGPoint newExpandOrigin = CGPointMake(self.expandedWindowFrame.origin.x * xRate, self.expandedWindowFrame.origin.y * yRate);
+        CGRect newExpandFrame = CGRectMake(newExpandOrigin.x, newExpandOrigin.y, self.expandedWindowFrame.size.width, self.expandedWindowFrame.size.height);
+        self.expandedWindowFrame = newExpandFrame;
+        
+        if (self.status == ATRootViewControllerStatusShrink)
+        {
+            self.assistiveWindow.frame = self.shrinkedWindowFrame;
+        }
+        else if (self.status == ATRootViewControllerStatusExpand)
+        {
+            self.assistiveWindow.frame = self.expandedWindowFrame;
+        }
+        else
+        {
+            
+        }
+        
+    } completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+        
+    }];
 }
 
 #pragma mark - Private: Gesture Recognizer Action
