@@ -16,6 +16,7 @@
 		3A63D73D1F2ABD5100670E2D /* ATRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D72E1F2ABD5100670E2D /* ATRootViewController.m */; };
 		3A63D73E1F2ABD5100670E2D /* ATShrinkInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D7301F2ABD5100670E2D /* ATShrinkInfoView.m */; };
 		3A63D7501F2C338900670E2D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D74F1F2C338900670E2D /* README.md */; };
+		3A63D7A31F32195600670E2D /* ATGPSEmulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D7A21F32195600670E2D /* ATGPSEmulator.m */; };
 		3AAB7E2D1F2A25D600F48E86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAB7E2C1F2A25D600F48E86 /* main.m */; };
 		3AAB7E301F2A25D600F48E86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAB7E2F1F2A25D600F48E86 /* AppDelegate.m */; };
 		3AAB7E331F2A25D600F48E86 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAB7E321F2A25D600F48E86 /* ViewController.m */; };
@@ -45,6 +46,8 @@
 		3A63D72F1F2ABD5100670E2D /* ATShrinkInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATShrinkInfoView.h; sourceTree = "<group>"; };
 		3A63D7301F2ABD5100670E2D /* ATShrinkInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATShrinkInfoView.m; sourceTree = "<group>"; };
 		3A63D74F1F2C338900670E2D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3A63D7A11F32195600670E2D /* ATGPSEmulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATGPSEmulator.h; sourceTree = "<group>"; };
+		3A63D7A21F32195600670E2D /* ATGPSEmulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATGPSEmulator.m; sourceTree = "<group>"; };
 		3AAB7E281F2A25D600F48E86 /* ATAssistiveToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATAssistiveToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AAB7E2C1F2A25D600F48E86 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3AAB7E2E1F2A25D600F48E86 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -93,6 +96,7 @@
 		3A63D7131F2ABD5100670E2D /* ATCustomizeViews */ = {
 			isa = PBXGroup;
 			children = (
+				3A63D7A01F32195600670E2D /* ATGPSEmulatorView */,
 				3A63D7141F2ABD5100670E2D /* ATDeviceLogsView */,
 				3A63D7171F2ABD5100670E2D /* ATFakeLocationView */,
 				3A63D7251F2ABD5100670E2D /* ATSandboxViewerView */,
@@ -125,6 +129,15 @@
 				3A63D7271F2ABD5100670E2D /* ATSandboxViewerView.m */,
 			);
 			path = ATSandboxViewerView;
+			sourceTree = "<group>";
+		};
+		3A63D7A01F32195600670E2D /* ATGPSEmulatorView */ = {
+			isa = PBXGroup;
+			children = (
+				3A63D7A11F32195600670E2D /* ATGPSEmulator.h */,
+				3A63D7A21F32195600670E2D /* ATGPSEmulator.m */,
+			);
+			path = ATGPSEmulatorView;
 			sourceTree = "<group>";
 		};
 		3AAB7E1F1F2A25D600F48E86 = {
@@ -316,6 +329,7 @@
 				3AAB7E301F2A25D600F48E86 /* AppDelegate.m in Sources */,
 				3A63D7331F2ABD5100670E2D /* ATDeviceLogsView.m in Sources */,
 				3A63D7501F2C338900670E2D /* README.md in Sources */,
+				3A63D7A31F32195600670E2D /* ATGPSEmulator.m in Sources */,
 				3A63D73D1F2ABD5100670E2D /* ATRootViewController.m in Sources */,
 				3A63D73C1F2ABD5100670E2D /* ATExpandInfoViewCell.m in Sources */,
 				3A63D7341F2ABD5100670E2D /* ATFakeLocationView.m in Sources */,
