@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		3A63D7311F2ABD5100670E2D /* ATAssistiveTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D7101F2ABD5100670E2D /* ATAssistiveTools.m */; };
-		3A63D7331F2ABD5100670E2D /* ATDeviceLogsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D7161F2ABD5100670E2D /* ATDeviceLogsView.m */; };
-		3A63D7341F2ABD5100670E2D /* ATFakeLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D7191F2ABD5100670E2D /* ATFakeLocationView.m */; };
-		3A63D73A1F2ABD5100670E2D /* ATSandboxViewerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D7271F2ABD5100670E2D /* ATSandboxViewerView.m */; };
 		3A63D73B1F2ABD5100670E2D /* ATExpandInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D72A1F2ABD5100670E2D /* ATExpandInfoView.m */; };
 		3A63D73C1F2ABD5100670E2D /* ATExpandInfoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D72C1F2ABD5100670E2D /* ATExpandInfoViewCell.m */; };
 		3A63D73D1F2ABD5100670E2D /* ATRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D72E1F2ABD5100670E2D /* ATRootViewController.m */; };
 		3A63D73E1F2ABD5100670E2D /* ATShrinkInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D7301F2ABD5100670E2D /* ATShrinkInfoView.m */; };
 		3A63D7501F2C338900670E2D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D74F1F2C338900670E2D /* README.md */; };
-		3A63D7A31F32195600670E2D /* ATGPSEmulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D7A21F32195600670E2D /* ATGPSEmulator.m */; };
+		3A63D7B71F34BC0300670E2D /* ATDeviceLogsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D7AD1F34BC0300670E2D /* ATDeviceLogsView.m */; };
+		3A63D7B81F34BC0300670E2D /* ATFakeLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D7B01F34BC0300670E2D /* ATFakeLocationView.m */; };
+		3A63D7B91F34BC0300670E2D /* ATGPSEmulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D7B31F34BC0300670E2D /* ATGPSEmulator.m */; };
+		3A63D7BA1F34BC0300670E2D /* ATSandboxViewerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63D7B61F34BC0300670E2D /* ATSandboxViewerView.m */; };
 		3AAB7E2D1F2A25D600F48E86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAB7E2C1F2A25D600F48E86 /* main.m */; };
 		3AAB7E301F2A25D600F48E86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAB7E2F1F2A25D600F48E86 /* AppDelegate.m */; };
 		3AAB7E331F2A25D600F48E86 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAB7E321F2A25D600F48E86 /* ViewController.m */; };
@@ -30,12 +30,6 @@
 		17C13EC1CFD9AE68E252E648 /* Pods-ATAssistiveToolsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATAssistiveToolsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ATAssistiveToolsDemo/Pods-ATAssistiveToolsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		3A63D70F1F2ABD5100670E2D /* ATAssistiveTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATAssistiveTools.h; sourceTree = "<group>"; };
 		3A63D7101F2ABD5100670E2D /* ATAssistiveTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATAssistiveTools.m; sourceTree = "<group>"; };
-		3A63D7151F2ABD5100670E2D /* ATDeviceLogsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATDeviceLogsView.h; sourceTree = "<group>"; };
-		3A63D7161F2ABD5100670E2D /* ATDeviceLogsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATDeviceLogsView.m; sourceTree = "<group>"; };
-		3A63D7181F2ABD5100670E2D /* ATFakeLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATFakeLocationView.h; sourceTree = "<group>"; };
-		3A63D7191F2ABD5100670E2D /* ATFakeLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATFakeLocationView.m; sourceTree = "<group>"; };
-		3A63D7261F2ABD5100670E2D /* ATSandboxViewerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATSandboxViewerView.h; sourceTree = "<group>"; };
-		3A63D7271F2ABD5100670E2D /* ATSandboxViewerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATSandboxViewerView.m; sourceTree = "<group>"; };
 		3A63D7281F2ABD5100670E2D /* ATCustomViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATCustomViewProtocol.h; sourceTree = "<group>"; };
 		3A63D7291F2ABD5100670E2D /* ATExpandInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATExpandInfoView.h; sourceTree = "<group>"; };
 		3A63D72A1F2ABD5100670E2D /* ATExpandInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATExpandInfoView.m; sourceTree = "<group>"; };
@@ -46,8 +40,14 @@
 		3A63D72F1F2ABD5100670E2D /* ATShrinkInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATShrinkInfoView.h; sourceTree = "<group>"; };
 		3A63D7301F2ABD5100670E2D /* ATShrinkInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATShrinkInfoView.m; sourceTree = "<group>"; };
 		3A63D74F1F2C338900670E2D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		3A63D7A11F32195600670E2D /* ATGPSEmulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATGPSEmulator.h; sourceTree = "<group>"; };
-		3A63D7A21F32195600670E2D /* ATGPSEmulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATGPSEmulator.m; sourceTree = "<group>"; };
+		3A63D7AC1F34BC0300670E2D /* ATDeviceLogsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATDeviceLogsView.h; sourceTree = "<group>"; };
+		3A63D7AD1F34BC0300670E2D /* ATDeviceLogsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATDeviceLogsView.m; sourceTree = "<group>"; };
+		3A63D7AF1F34BC0300670E2D /* ATFakeLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATFakeLocationView.h; sourceTree = "<group>"; };
+		3A63D7B01F34BC0300670E2D /* ATFakeLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATFakeLocationView.m; sourceTree = "<group>"; };
+		3A63D7B21F34BC0300670E2D /* ATGPSEmulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATGPSEmulator.h; sourceTree = "<group>"; };
+		3A63D7B31F34BC0300670E2D /* ATGPSEmulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATGPSEmulator.m; sourceTree = "<group>"; };
+		3A63D7B51F34BC0300670E2D /* ATSandboxViewerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATSandboxViewerView.h; sourceTree = "<group>"; };
+		3A63D7B61F34BC0300670E2D /* ATSandboxViewerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATSandboxViewerView.m; sourceTree = "<group>"; };
 		3AAB7E281F2A25D600F48E86 /* ATAssistiveToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATAssistiveToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AAB7E2C1F2A25D600F48E86 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3AAB7E2E1F2A25D600F48E86 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -77,7 +77,6 @@
 		3A63D70E1F2ABD5100670E2D /* ATAssistiveTools */ = {
 			isa = PBXGroup;
 			children = (
-				3A63D7131F2ABD5100670E2D /* ATCustomizeViews */,
 				3A63D70F1F2ABD5100670E2D /* ATAssistiveTools.h */,
 				3A63D7101F2ABD5100670E2D /* ATAssistiveTools.m */,
 				3A63D7281F2ABD5100670E2D /* ATCustomViewProtocol.h */,
@@ -93,57 +92,58 @@
 			path = ATAssistiveTools;
 			sourceTree = "<group>";
 		};
-		3A63D7131F2ABD5100670E2D /* ATCustomizeViews */ = {
+		3A63D7AA1F34BC0300670E2D /* ATCustomizeViews */ = {
 			isa = PBXGroup;
 			children = (
-				3A63D7A01F32195600670E2D /* ATGPSEmulatorView */,
-				3A63D7141F2ABD5100670E2D /* ATDeviceLogsView */,
-				3A63D7171F2ABD5100670E2D /* ATFakeLocationView */,
-				3A63D7251F2ABD5100670E2D /* ATSandboxViewerView */,
+				3A63D7AB1F34BC0300670E2D /* ATDeviceLogsView */,
+				3A63D7AE1F34BC0300670E2D /* ATFakeLocationView */,
+				3A63D7B11F34BC0300670E2D /* ATGPSEmulatorView */,
+				3A63D7B41F34BC0300670E2D /* ATSandboxViewerView */,
 			);
 			path = ATCustomizeViews;
 			sourceTree = "<group>";
 		};
-		3A63D7141F2ABD5100670E2D /* ATDeviceLogsView */ = {
+		3A63D7AB1F34BC0300670E2D /* ATDeviceLogsView */ = {
 			isa = PBXGroup;
 			children = (
-				3A63D7151F2ABD5100670E2D /* ATDeviceLogsView.h */,
-				3A63D7161F2ABD5100670E2D /* ATDeviceLogsView.m */,
+				3A63D7AC1F34BC0300670E2D /* ATDeviceLogsView.h */,
+				3A63D7AD1F34BC0300670E2D /* ATDeviceLogsView.m */,
 			);
 			path = ATDeviceLogsView;
 			sourceTree = "<group>";
 		};
-		3A63D7171F2ABD5100670E2D /* ATFakeLocationView */ = {
+		3A63D7AE1F34BC0300670E2D /* ATFakeLocationView */ = {
 			isa = PBXGroup;
 			children = (
-				3A63D7181F2ABD5100670E2D /* ATFakeLocationView.h */,
-				3A63D7191F2ABD5100670E2D /* ATFakeLocationView.m */,
+				3A63D7AF1F34BC0300670E2D /* ATFakeLocationView.h */,
+				3A63D7B01F34BC0300670E2D /* ATFakeLocationView.m */,
 			);
 			path = ATFakeLocationView;
 			sourceTree = "<group>";
 		};
-		3A63D7251F2ABD5100670E2D /* ATSandboxViewerView */ = {
+		3A63D7B11F34BC0300670E2D /* ATGPSEmulatorView */ = {
 			isa = PBXGroup;
 			children = (
-				3A63D7261F2ABD5100670E2D /* ATSandboxViewerView.h */,
-				3A63D7271F2ABD5100670E2D /* ATSandboxViewerView.m */,
-			);
-			path = ATSandboxViewerView;
-			sourceTree = "<group>";
-		};
-		3A63D7A01F32195600670E2D /* ATGPSEmulatorView */ = {
-			isa = PBXGroup;
-			children = (
-				3A63D7A11F32195600670E2D /* ATGPSEmulator.h */,
-				3A63D7A21F32195600670E2D /* ATGPSEmulator.m */,
+				3A63D7B21F34BC0300670E2D /* ATGPSEmulator.h */,
+				3A63D7B31F34BC0300670E2D /* ATGPSEmulator.m */,
 			);
 			path = ATGPSEmulatorView;
+			sourceTree = "<group>";
+		};
+		3A63D7B41F34BC0300670E2D /* ATSandboxViewerView */ = {
+			isa = PBXGroup;
+			children = (
+				3A63D7B51F34BC0300670E2D /* ATSandboxViewerView.h */,
+				3A63D7B61F34BC0300670E2D /* ATSandboxViewerView.m */,
+			);
+			path = ATSandboxViewerView;
 			sourceTree = "<group>";
 		};
 		3AAB7E1F1F2A25D600F48E86 = {
 			isa = PBXGroup;
 			children = (
 				3A63D74F1F2C338900670E2D /* README.md */,
+				3A63D7AA1F34BC0300670E2D /* ATCustomizeViews */,
 				3A63D70E1F2ABD5100670E2D /* ATAssistiveTools */,
 				3AAB7E2A1F2A25D600F48E86 /* ATAssistiveToolsDemo */,
 				3AAB7E291F2A25D600F48E86 /* Products */,
@@ -324,15 +324,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A63D73A1F2ABD5100670E2D /* ATSandboxViewerView.m in Sources */,
+				3A63D7BA1F34BC0300670E2D /* ATSandboxViewerView.m in Sources */,
+				3A63D7B81F34BC0300670E2D /* ATFakeLocationView.m in Sources */,
+				3A63D7B71F34BC0300670E2D /* ATDeviceLogsView.m in Sources */,
+				3A63D7B91F34BC0300670E2D /* ATGPSEmulator.m in Sources */,
 				3AAB7E331F2A25D600F48E86 /* ViewController.m in Sources */,
 				3AAB7E301F2A25D600F48E86 /* AppDelegate.m in Sources */,
-				3A63D7331F2ABD5100670E2D /* ATDeviceLogsView.m in Sources */,
 				3A63D7501F2C338900670E2D /* README.md in Sources */,
-				3A63D7A31F32195600670E2D /* ATGPSEmulator.m in Sources */,
 				3A63D73D1F2ABD5100670E2D /* ATRootViewController.m in Sources */,
 				3A63D73C1F2ABD5100670E2D /* ATExpandInfoViewCell.m in Sources */,
-				3A63D7341F2ABD5100670E2D /* ATFakeLocationView.m in Sources */,
 				3A63D7311F2ABD5100670E2D /* ATAssistiveTools.m in Sources */,
 				3A63D73E1F2ABD5100670E2D /* ATShrinkInfoView.m in Sources */,
 				3AAB7E2D1F2A25D600F48E86 /* main.m in Sources */,
