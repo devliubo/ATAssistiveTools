@@ -7,7 +7,6 @@
 //
 
 #import "ATSandboxViewerView.h"
-#import <GCDWebUploader.h>
 
 NSString * const ATSandboxViewerViewSelecteFileNotification = @"ATSandboxViewerViewSelecteFileNotification";
 NSString * const ATSandboxViewerViewFilePathKey = @"ATSandboxViewerViewFilePath";
