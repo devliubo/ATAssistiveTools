@@ -92,7 +92,7 @@ ATGPSEmulatorView *emulatorView = [[ATGPSEmulatorView alloc] init];
 * 补全ATCustomizeViews的介绍说明
 * 收缩状态支持显示自定义的届满 ，支持显示自定义的标题
 * 增加生成 framework 的 target ，打包成 static library
-* 增加 podspec 文件，支持使用 cocoapods 安装 
+* ~~增加 podspec 文件~~ 支持使用 cocoapods 安装
 
 ## Notice
 
